@@ -21,6 +21,7 @@ def b64_encode(text: str) -> str:
 
     return encoded_string + padding_chars
 
+
 def b64_decode(text: str) -> str:
     # Remove padding characters and count them
     padding = text.count('=')
@@ -40,3 +41,8 @@ def b64_decode(text: str) -> str:
     decoded_string = ''.join(chr(int(chunk, 2)) for chunk in byte_chunks if len(chunk) == 8)
 
     return decoded_string
+
+
+"""
+These two functions exist in `base64` as `b64encode()` and `b64decode()`
+"""
