@@ -92,14 +92,14 @@ final_permutation_table = [39, 7, 47, 15, 55, 23, 63, 31, 38, 6, 46, 14, 54, 22,
 
 def encrypt(plaintext, key):
     """
-        Encrypts the given plaintext using the DES algorithm with the provided key.
+        Encrypts the given plaintext using the DES algorithm with the provided Hex key.
 
         Args:
             plaintext (str): The plaintext to be encrypted.
             key (str): The key used for encryption.
 
         Returns:
-            str: The ciphertext obtained after encryption.
+            str: The ciphertext obtained after encryption (in hexadecimal representation).
         """
     ciphertext = ''
     hex_plaintext = convert_text_to_hex(plaintext)
@@ -115,14 +115,14 @@ def encrypt(plaintext, key):
 
 def decrypt(ciphertext, key):
     """
-        Decrypts the given ciphertext using the DES algorithm with the provided key.
+        Decrypts the given Hex ciphertext using the DES algorithm with the provided Hex key.
 
         Args:
             ciphertext (str): The ciphertext to be decrypted.
             key (str): The key used for decryption.
 
         Returns:
-            str: The plaintext obtained after decryption.
+            str: The plaintext obtained after decryption (in hexadecimal representation).
         """
     plaintext = ''
 
@@ -136,12 +136,19 @@ def decrypt(ciphertext, key):
     return plaintext
 
 
-def encrypt_hex_block(plain_text, key):
+def encrypt_hex_block(plaintext, key):
     """
-    Encrypts the given Hex plaintext using the DES algorithm with the provided key.
+    Encrypts the given Hex plaintext using the DES algorithm with the provided Hex key.
+
+    Args:
+            plaintext (str): The plaintext of the block to be encrypted.
+            key (str): The key used for encryption.
+
+        Returns:
+            str: The ciphertext obtained after encryption (in hexadecimal representation).
     """
     # [0] Convert Hex To binary
-    binary_plain = convert_hex_to_binary(plain_text)
+    binary_plain = convert_hex_to_binary(plaintext)
     binary_key = convert_hex_to_binary(key)
 
     # [1] Initial Permutation
@@ -173,12 +180,19 @@ def encrypt_hex_block(plain_text, key):
     return "0x" + convert_binary_to_hex(ciphered_block)
 
 
-def decrypt_hex_block(cipher_text, key):
+def decrypt_hex_block(ciphertext, key):
     """
-    Decrypts the given Hex ciphertext using the DES algorithm with the provided key.
+    Decrypts the given Hex ciphertext using the DES algorithm with the provided Hex key.
+
+    Args:
+            ciphertext (str): The ciphertext to be decrypted.
+            key (str): The key used for decryption.
+
+        Returns:
+            str: The plaintext obtained after decryption (in hexadecimal representation).
     """
     # [0] Convert To binary
-    binary_cipher = convert_hex_to_binary(cipher_text)
+    binary_cipher = convert_hex_to_binary(ciphertext)
     binary_key = convert_hex_to_binary(key)
 
     # [1] Initial Permutation
