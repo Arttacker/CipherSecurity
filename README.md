@@ -1,17 +1,17 @@
 
 # CipherSecurity Framework
 
-**CipherSecurity Framework** is a comprehensive assistant designed to help you solve cryptography challenges any CTF platform. It also serves as a library containing various implementations of cryptographic and mathematical algorithms.
+**CipherSecurity Framework** is a comprehensive assistant designed to help you solve cryptography challenges on any CTF platform. It also serves as a library containing various implementations of cryptographic and mathematical algorithms.
 
 ## Features
 
-- **Classic Encryption**: Implementations of Caesar cipher, Vigenère cipher, Hill cipher, Playfair cipher and more.
-- **Modern Encryption**: DES, RSA, Deffie-Hellman key exchange, Elgamal encryption and other modern cryptographic algorithms.
+- **Classic Encryption**: Implementations of Caesar cipher, Vigenère cipher, Hill cipher, Playfair cipher, and more.
+- **Modern Encryption**: DES, RSA, Deffie-Hellman key exchange, ElGamal encryption, and other modern cryptographic algorithms.
 - **Hashing**: MD5, SHA-1, SHA-256, and other hashing functions.
 - **Encoding**: Base64, Hex, etc.
 - **Digital Signatures**: RSA, DSA, Elgmal Digital Signature implementations.
 - **Mathematical Algorithms**: Prime number generation, modular arithmetic, GCD, and more.
-- **Tests**: Comprehensive tests for all implemented algorithms to ensure their correctness.
+- **Tests**: Comprehensive tests for all implemented algorithms to ensure correctness.
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Arttacker/CipherSecurity.git
-cd CryptoHack-Framework
+cd CipherSecurity
 ```
 
 Install the required packages:
