@@ -134,9 +134,4 @@ def create_2d_array(text: str, n_columns: int, depth: int, method: str) -> List[
 
 
 if __name__ == '__main__':
-    plaintext = "defendtheeastwallofthecastleee"
-    ciphertext = "nalceehwttdttfseeleedsoaefeahl"
-    key = [3, 2, 6, 4, 1, 5]
-    print(encrypt(plaintext, key).upper() == ciphertext.upper())
-    print(decrypt(ciphertext, key).upper() == plaintext.upper())
-    print(analyze(plaintext, ciphertext) == key)
+    pass
