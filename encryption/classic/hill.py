@@ -113,7 +113,7 @@ def is_key_valid(key):
     if len(key) % N != 0:  # The key is not a square matrix
         return False
 
-    gcd = extended_euclidian.gcd(det_nxn(key), 26)
+    gcd = euclidean.gcd(det_nxn(key), 26)
     if gcd != 1:  # not relatively prime with 26
         return False
 
@@ -369,7 +369,7 @@ def inverse_nxn(matrix):
     det = mod26(det_nxn(matrix))
 
     # [2] Calculating the inverse of the determinant under mod 26 using the Extended Euclidean Algorithm
-    inverse_det = extended_euclidian.mod_inv(det, 26)
+    inverse_det = euclidean.mod_inv(det, 26)
 
     # [3] Calculating the Adjoint of K
     adjoint_matrix = adjoint(matrix)
